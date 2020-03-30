@@ -1,0 +1,2 @@
+# UkladRownan
+C++, Gauss, Cramer
