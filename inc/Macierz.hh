@@ -2,6 +2,7 @@
 #define MACIERZ_HH
 
 #include "rozmiar.h"
+#include "Wektor.hh"
 #include <iostream>
 
 
@@ -10,13 +11,11 @@
  *  i jakie ma glowne cechy.
  */
 class Macierz {
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
-   */
-  public:
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
-   */    
+  Wektor Kolumna[ROZMIAR];/*sa 3 wiersze, czyli 3 wektory*/
+public:
+  Wektor operator[](int i) const;
+  Wektor &operator[](int i);
+  //Wektor Kolumna[ROZMIAR];
 };
 
 
@@ -40,3 +39,5 @@ std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 
 
 #endif
+
+//KLASY I METODY WARUNKI PRE I POST
