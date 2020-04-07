@@ -64,7 +64,9 @@ double Wektor::operator * (Wektor Wektor2){//tutaj mnozemy wektory przez siebie,
 
 Wektor Wektor::operator x (Wektor Wektor2){//tutaj iloczyn wektorowy
     Wektor Wynik;
-    Wynik[0]=Skladowa[1]*Skladowa
+    Wynik[0]=Skladowa[1]*Wektor2[2]-Wektor2[1]*Skladowa[2];
+    Wynik[1]=-(Skladowa[0]*Wektor2[2]-Wektor2[0]*Skladowa[2]);//znak przeciwny
+    Wynik[2]=Skladowa[0]*Wektor2[1]-Wektor2[0]*Skladowa[1];
 
     return Wynik;
 }
