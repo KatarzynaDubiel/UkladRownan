@@ -61,3 +61,10 @@ double Wektor::operator * (Wektor Wektor2){//tutaj mnozemy wektory przez siebie,
 
     return Wynik;
 }
+
+Wektor Wektor::operator x (Wektor Wektor2){//tutaj iloczyn wektorowy
+    Wektor Wynik;
+    Wynik[0]=Skladowa[1]*Skladowa
+
+    return Wynik;
+}

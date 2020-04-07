@@ -31,6 +31,8 @@ Wektor operator / (double Skalar);//podobnie
 double operator * (Wektor Wektor2);//mnoze wektor razy wektor
 //Liczba==Skalar
 
+Wektor operator x (Wektor Wektor2);//iloczyn wektorowy
+
 };
 
 
