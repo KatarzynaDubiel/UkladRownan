@@ -11,7 +11,6 @@ double &Wektor::operator[](int i){
 std::istream& operator >> (std::istream &Strm, Wektor &Wek){
     for(int i=0; i<ROZMIAR; i++){
         Strm>>Wek[i];//wczytywanie wektora
-        return Strm;//dzieki temu znika warning (i inny note) że for nie ma guarda
     }
         return Strm;//zwraca co wczytane
 }
@@ -55,14 +54,15 @@ Wektor Wektor::operator / (double Skalar){//tutaj dzielimy wektor przez liczbe
 }
 
 double Wektor::operator * (Wektor Wektor2){//tutaj mnozemy wektory przez siebie, czyli robimy iloczyn skalarny
-    double Wynik;
+    double Wynik=0;
+
     for (int i=0; i<ROZMIAR; i++)
     Wynik=Wynik+(Skladowa[i]*Wektor2[i]);
 
     return Wynik;
 }
 
-Wektor Wektor::operator x (Wektor Wektor2){//tutaj iloczyn wektorowy
+Wektor Wektor::operator & (Wektor Wektor2){//tutaj iloczyn wektorowy
     Wektor Wynik;
     Wynik[0]=Skladowa[1]*Wektor2[2]-Wektor2[1]*Skladowa[2];
     Wynik[1]=-(Skladowa[0]*Wektor2[2]-Wektor2[0]*Skladowa[2]);//znak przeciwny

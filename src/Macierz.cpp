@@ -21,11 +21,34 @@ std::ostream& operator << (std::ostream &Strm, const Macierz &Mac){
     return Strm;
 }
 
-Macierz Kwadrat(Wektor Skladowa){//skladowa z kolumny z macierzy - do dokonczenia
-    double SpotegowanyEl;
+Macierz Macierz::Kwadrat(){//kazdy element macierzy podnosi sie do kwadratu
+    Macierz Macierz_Spotegowana;
     for(int i=0; i<ROZMIAR; i++){
-        for(int i=0; i<ROZMIAR; i++){
-        SpotegowanyEl=SpotegowanyEl*SpotegowanyEl;
+        for(int j=0; j<ROZMIAR; j++){
+        Macierz_Spotegowana[i][j]=Kolumna[i][j]*Kolumna[i][j];
         }
     }
+    return  Macierz_Spotegowana;
 }
+
+ void Macierz::Wyznacznik_Gauss(){
+     Macierz kopia=*this;
+     int j;
+     Wyznacznik=1;
+     for(int i=0; i<ROZMIAR; i++){
+         j=i;
+         while(kopia[i][i]==0){
+             j++;
+             if(j<ROZMIAR)
+             std::swap(kopia[i],kopia[j]);
+             else{
+                 Wyznacznik=0;
+                 return;
+             }
+         }
+         for(int k=i+1; k<ROZMIAR; k++){
+            kopia[k]=kopia[k]-kopia[i]*(kopia[k][i]/kopia[i][i]);
+         }
+         Wyznacznik=Wyznacznik*kopia[i][i];
+     }
+ }

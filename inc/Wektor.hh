@@ -3,8 +3,6 @@
 
 #include "rozmiar.h"
 #include <iostream>
-
-
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
  *  i jakie ma glowne cechy.
@@ -31,19 +29,16 @@ Wektor operator / (double Skalar);//podobnie
 double operator * (Wektor Wektor2);//mnoze wektor razy wektor
 //Liczba==Skalar
 
-Wektor operator x (Wektor Wektor2);//iloczyn wektorowy
+Wektor operator & (Wektor Wektor2);//iloczyn wektorowy
 
 };
-
-
-  
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
  * danych akceptuje. Jakie jest znaczenie parametrow itd.
  * Szczegoly dotyczace zalecen realizacji opisow mozna
  * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+ *    ~bk/edu/kpo/zalecenia.txt
  */
 std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 
@@ -52,9 +47,8 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  * danych akceptuje. Jakie jest znaczenie parametrow itd.
  * Szczegoly dotyczace zalecen realizacji opisow mozna
  * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+ *    ~bk/edu/kpo/zalecenia.txt
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
 
 #endif
-//CONSTY GDZIE SIE DA!
