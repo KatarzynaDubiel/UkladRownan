@@ -14,7 +14,7 @@ int main(){
   cout<<endl<<" Podaj macierz, ktora bedziesz odejmowac: "<<endl<<endl;
   cin>>M2;
 
-  M4=Macierz::Odejmowanie(M2, M3);
+  M4=M4.Macierz::Odejmowanie(M2, M3);
 
   cout<<endl<<"Wynik odejmowania macierzy to: "<<endl<<endl<<M4<<endl;
 
@@ -27,7 +27,7 @@ int main(){
   cout<<endl<<" Podaj macierz, przez ktora chcesz pomnozyc: "<<endl<<endl;
   cin>>M6;
 
-  M7=Macierz::Mnozenie(M5, M6);
+  M7=M4.Macierz::Mnozenie(M5, M6);
 
   cout<<endl<<"Wynik mnozenia macierzy to: "<<endl<<endl<<M7<<endl;
 
