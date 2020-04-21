@@ -11,12 +11,15 @@
  *  i jakie ma glowne cechy.
  */
 class Macierz {
-  Wektor Kolumna[ROZMIAR];/*sa 3 wiersze, czyli 3 wektory*/
+  Wektor Kolumna[ROZMIAR];/*sa 3 wiersze, czyli 3 wektory*///ZMIANA NA 10 DO MODYFIKACJI
   double Wyznacznik;
 public:
 double get_Wyznacznik() const {return Wyznacznik;}
   Wektor operator[](int i) const;
   Wektor &operator[](int i);
+
+Macierz Odejmowanie(Macierz Odjemna, Macierz Odjemnik);
+Macierz Mnozenie(Macierz Czynnik1, Macierz Czynnik2);
 
 Macierz Kwadrat();
 Wektor operator * (Wektor Skladowy){
