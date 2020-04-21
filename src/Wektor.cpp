@@ -53,7 +53,7 @@ Wektor Wektor::operator / (double Skalar){//tutaj dzielimy wektor przez liczbe
     return Wynik;
 }
 
-double Wektor::operator * (Wektor Wektor2){//tutaj mnozemy wektory przez siebie, czyli robimy iloczyn skalarny
+double Wektor::operator * (Wektor Wektor2){//tutaj mnozemy wektory przez siebie, czyli robimy iloczyn wektorowy
     double Wynik=0;
 
     for (int i=0; i<ROZMIAR; i++)
