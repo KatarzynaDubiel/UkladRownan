@@ -27,7 +27,7 @@ int main(){
   cout<<endl<<" Podaj macierz, przez ktora chcesz pomnozyc: "<<endl<<endl;
   cin>>M6;
 
-  M7=M4.Macierz::Mnozenie(M5, M6);
+  M7=M7.Macierz::Mnozenie(M5, M6);
 
   cout<<endl<<"Wynik mnozenia macierzy to: "<<endl<<endl<<M7<<endl;
 
